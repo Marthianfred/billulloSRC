@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="15c9c9fa-8905-4376-90dd-f9a031a80d02" name="tubillullo.com">
+        <fileTransfer rootFolder="/home/tubillullo/backend" accessType="SFTP" host="193.43.134.165" port="22" sshConfigId="f088e4fb-265f-484f-b59a-53d3194bd69a" sshConfig="tubillullo@193.43.134.165:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

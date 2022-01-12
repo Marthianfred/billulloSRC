@@ -5,13 +5,15 @@ import (
 	"github.com/gorilla/mux"
 )
 
-func SetBillulloRutas(r *mux.Router)  {
+func ConfigRouter(router *mux.Router) {
 
-	subRouter := r.PathPrefix("/api").Subrouter()
-	subRouter.HandleFunc("/login}", Controllers.Login).Methods("POST")
+	router.HandleFunc("/", Controllers.Home)
 
-	subRouter.HandleFunc("/users", Controllers.CreateUser).Methods("POST")
-	subRouter.HandleFunc("/users/{id}", Controllers.GetUser).Methods("GET")
-	subRouter.HandleFunc("/users/{id}", Controllers.UpdateUser).Methods("PUT")
-	subRouter.HandleFunc("/users/{id}", Controllers.DeleteUser).Methods("DELETE")
+	apiRoute := router.PathPrefix("/api").Subrouter()
+	apiRoute.HandleFunc("/login", Controllers.Login).Methods("POST")
+	apiRoute.HandleFunc("/users", Controllers.CreateUser).Methods("POST")
+	apiRoute.HandleFunc("/users/{id}", Controllers.GetUser).Methods("GET")
+	apiRoute.HandleFunc("/users/{id}", Controllers.UpdateUser).Methods("PUT")
+	apiRoute.HandleFunc("/users/{id}", Controllers.DeleteUser).Methods("DELETE")
+
 }
